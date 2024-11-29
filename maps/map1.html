@@ -86,12 +86,12 @@
         var pu = L.layerGroup([marker, marker2])
 
         var overlayMaps = {
-            "PU Campuses": pu
+            "PU Campuses": pu,
+            'Old campus': marker,
+            'New campus': marker2
         };
 
-        var boundary = new L.geoJson.ajax("https://github.com/insane-infants/Portfolio/blob/232ab8f7e3431cdbbc41c977e903ab5119e3462b/maps/Lhr_Boundary.geojson")
 
-        
         var layerControl = L.control.layers(baseMaps ,overlayMaps).addTo(map);
 
         var popup = L.popup()

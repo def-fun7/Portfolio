@@ -80,7 +80,7 @@
 
 .page-home .navbar {
   position: fixed;
-  /* top: auto; */
+  /* top: sticky; */
   left: 0;
   width: 100%;
   padding-top: 6px;

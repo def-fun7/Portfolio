@@ -1068,6 +1068,12 @@ a:hover, a:active {
     height: 100%;
 }
 
+
+.grid-item map {
+    width: 100%;
+    height: 100%;
+}
+
 .grid-item .img-place {
     display: block;
     margin: 0 auto;
@@ -1424,3 +1430,64 @@ a:hover, a:active {
 .theme-purple .theme-list li::before {
     border-color: #6f42c1;
 }
+
+
+#map {
+    width: auto;
+  height: 600px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 100;
+  }
+
+  #map.zoom-in {
+    /* Styles for the zoomed-in state */
+    transform: scale(1.2); /* Adjust the scale factor as needed */
+    transition: transform 100s ease-in-out; /* Adjust the transition duration and easing */
+  }
+
+  #map {
+    width: auto;
+  height: 600px;
+  padding: 100px;
+  border: 5px solid gray;
+  margin: 50px;
+  }
+
+  #map.zoom-in {
+    /* Styles for the zoomed-in state */
+    transform: scale(1.2); /* Adjust the scale factor as needed */
+    transition: transform 100s ease-in-out; /* Adjust the transition duration and easing */
+  }
+
+  #map2 {
+    width: auto;
+  height: 600px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 50px;
+  }
+
+  #map2.zoom-in {
+    /* Styles for the zoomed-in state */
+    transform: scale(1.2); /* Adjust the scale factor as needed */
+    transition: transform 100s ease-in-out; /* Adjust the transition duration and easing */
+  }
+
+  .colored-list {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+  }
+
+  .colored-list li {
+    margin-bottom: 10px;
+  }
+
+  .blue-item {
+    color: blue;
+  }
+
+  .red-item {
+    color: orange;
+  }

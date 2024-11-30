@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
-    <script src="leaflet-ajax-gh-pages\dist\leaflet.ajax.js"></script>
+    
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
@@ -47,7 +47,7 @@
             maxZoom: 20,
             attribution: '&copy; CNES, Distribution Airbus DS, © Airbus DS, © PlanetObserver (Contains Copernicus Data) | &copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
             ext: 'jpg'
-        });
+        }).addTo(map);
 
         var Stadia_AlidadeSmoothDark = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}', {
             minZoom: 0,
@@ -58,7 +58,7 @@
 
         var Esri_WorldImagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
             attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-        }).addTo(map);
+        });
         
         var baseMaps = {
             "OpenStreetMap": tiles,
@@ -83,10 +83,8 @@
         var marker2 = L.marker([31.569470226097426, 74.30875642012062 ], {icon: greenIcon}).addTo(map);
         marker2.bindPopup("<b>Welcome!</b><br>This is PU (old campus).")
 
-        var pu = L.layerGroup([marker, marker2])
 
         var overlayMaps = {
-            "PU Campuses": pu,
             'Old campus': marker,
             'New campus': marker2
         };
@@ -95,8 +93,8 @@
         var layerControl = L.control.layers(baseMaps ,overlayMaps).addTo(map);
 
         var popup = L.popup()
-            .setLatLng([31.522045, 74.1441])
-            .setContent("<b>This is Lahore <span>&#8594;</span>.")
+            .setLatLng([31.412045, 74.2641])
+            .setContent("<b><span>&#9787;</span> This is Lahore <span>&#8595;</span>.")
             .openOn(map);
 
             var popup = L.popup();
@@ -112,5 +110,6 @@
 
     </script>
 
+    
 </body>
 </html> 
